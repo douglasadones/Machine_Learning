@@ -1,7 +1,17 @@
 import numpy as np
 
+# Operador lógico AND
+# inputs = np.array([[0,0], [0,1], [1, 0], [1,1]])
+# outputs = np.array([0, 0, 0, 1])
+
+# Operador Lógico OR
+# inputs = np.array([[0,0], [0,1], [1, 0], [1,1]])
+# outputs = np.array([0, 1, 1, 1])
+
+# Operador Lógico XOR - Problema pois a função linear (Step Function) não é suficiente
 inputs = np.array([[0,0], [0,1], [1, 0], [1,1]])
-outputs = np.array([0, 0, 0, 1])
+outputs = np.array([0, 1, 1, 0])
+
 weights = np.array([0.0, 0.0])
 learning_rate = 0.1
 
@@ -31,3 +41,7 @@ def training():
 
 
 training()
+print(outputCalculate(inputs[0]))
+print(outputCalculate(inputs[1]))
+print(outputCalculate(inputs[2]))
+print(outputCalculate(inputs[3]))
